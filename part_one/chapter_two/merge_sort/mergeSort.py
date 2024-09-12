@@ -1,6 +1,6 @@
 #问题描述。输入n个数进行排序
 import math
-MAX = 100000 #正无穷 float("inf")           #负无穷 float("-inf")
+MAX = 100000 #正无穷 float("inf")           
 n = int(input("输入n:"))
 array = []
 num = n
@@ -30,8 +30,8 @@ def merge(A,p,q,r):
         k+=1
 def mergeSort(A,p,r):
     if p<r:
-        q = math.floor((r+p)/2)-1  #int() 向0取整，即结果一定比该数绝对值小
-        if(q<p): q=p               #感觉这样取整有点刻意，明天想想
+        q = math.floor((r+p)/2)-1  
+        if(q<p): q=p               
         mergeSort(A,p,q)
         mergeSort(A,q+1,r)
         merge(A,p,q,r)
